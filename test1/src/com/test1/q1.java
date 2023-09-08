@@ -1,7 +1,7 @@
 package com.test1;
 
 public class q1 {
-	public static String m1(int num) {
+	public String m1(int num) {
 		int t=num;
 		int sum=0;
 		while(t>0) {
@@ -18,8 +18,10 @@ public class q1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int num=12213;
-		String result=m1(num);
+		int num=1221;
+		
+		q1 obj = new q1();
+		String result=obj.m1(num);
 		System.out.println(result);
 
 	}
