@@ -1,7 +1,7 @@
 package com.test1;
 
 public class q4 {
-public void m1(int[] arr,int num) {
+public static void m1(int[] arr,int num) {
 		
 		for(int i=0;i<arr.length;i++) {
 			int res=arr[i];
@@ -25,9 +25,7 @@ public void m1(int[] arr,int num) {
 		// TODO Auto-generated method stub
 		int [] arr= {2,3,6,4,9,0,11,};
 		int num=11;
-		
-		q4 obj = new q4();
-		obj.m1(arr, num);
+		q4.m1(arr, num);
 	}
 
 }
