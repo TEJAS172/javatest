@@ -1,15 +1,21 @@
 package com.test1;
 
 public class q4 {
-	public void m1(int[] a) {
-		int num=11;
-		for(int i=0;i<a.length-1;i++) {
-			for(int j=0;j<a.length;j++) {
-				if(a[i]+a[j]==num) {
-					System.out.println(i+""+j);
+public void m1(int[] arr,int num) {
+		
+		for(int i=0;i<arr.length;i++) {
+			int res=arr[i];
+			if(arr[i]==num) {
+				System.out.println(i);
+			}
+			for(int j=i+1;j<arr.length;j++) {
+				res=res+arr[j];
+				if(res>11) {
+					break;
 				}
-				if(a[j]==11) {
-					System.out.println(j);
+				if(res==num) {
+					System.out.println(i+""+j);
+					break;
 				}
 			}
 		}
@@ -17,11 +23,11 @@ public class q4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr = {2,3,6,4,9,0,11};
+		int [] arr= {2,3,6,4,9,0,11,};
+		int num=11;
 		
 		q4 obj = new q4();
-		obj.m1(arr);
-
+		obj.m1(arr, num);
 	}
 
 }

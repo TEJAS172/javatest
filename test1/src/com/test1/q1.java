@@ -1,27 +1,26 @@
 package com.test1;
 
 public class q1 {
-	public void m1() {
-		int num=1221;
+	public static String m1(int num) {
+		int t=num;
 		int sum=0;
-		while(num>0) {
-			int b1 = num%10;
-			sum = (sum*10)/b1;
-			num = num/10;
+		while(t>0) {
+			int b=t%10;
 			
+			sum=sum*10+b;
+			t=t/10;
 		}
-		if(sum==num) {
-			System.out.println("It is palindrom");
-		}if(num!=sum) {
-			System.out.println("Not a palindrom");
+		if(num==sum) {
+			return "It is Palindrome";
 		}
-		
+		return " Not Palindrome";
 	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	
-		q1 obj = new q1();
-		obj.m1();
+		int num=12213;
+		String result=m1(num);
+		System.out.println(result);
 
 	}
 
